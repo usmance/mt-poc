@@ -192,3 +192,18 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+
+test.db
+test.db-*
+*.db
+
+# Test coverage reports
+htmlcov/
+.coverage
+coverage.xml
+
+# Test cache
+.pytest_cache/
+__pycache__/
+*.pyc

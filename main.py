@@ -8,9 +8,10 @@ from api.main import api_router
 from db.session import engine, Base
 
 load_dotenv()
+if not os.getenv("TESTING"):
+    Base.metadata.create_all(bind=engine)
 
-
-Base.metadata.create_all(bind=engine)
+# Base.metadata.create_all(bind=engine)
 
 
 

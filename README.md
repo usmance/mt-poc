@@ -67,6 +67,14 @@ API_PREFIX="/api"
 - Ensure PostgreSQL is running and the database exists.
 - Run the database initialization script:
 
+
+### 6. Running Tests
+```
+
+- pytest
+
+```
+
 ---
 
 ## Running the API
@@ -92,6 +100,7 @@ mt-poc/
 ├── router/
 ├── schemas/
 ├── services/
+├── tests/
 ├── main.py
 ├── requirements.txt
 └── README.md

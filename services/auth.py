@@ -26,7 +26,7 @@ async def signup_user(user: UserCreate, db: Session = Depends(get_db)):
 async def login_user(user: UserLogin, db: Session = Depends(get_db)):
     db_user = db.query(User).filter(User.email == user.email).first()
     if not db_user or not verify_password(user.password, db_user.hashed_password):
-        raise HTTPException(status_code=400, detail="Invalid credentials")
+        raise HTTPException(status_code=401, detail="Invalid credentials")
     
     user_dict = UserRead.model_validate(db_user).model_dump()
     return {
